@@ -1,14 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { AppProvider } from './context/AppContext';
-import ProtectedRoute from './components/common/ProtectedRoute';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import LoginPage from './components/auth/LoginPage';
-import RegisterPage from './components/auth/RegisterPage';
-import Dashboard from './components/dashboard/Dashboard';
-import StepsTracker from './components/steps/StepsTracker';
+import ProtectedRoute from './components/common/ProtectedRoute';
+import PlaceholderPage from './components/common/PlaceholderPage';
 import WaterTracker from './components/water/WaterTracker';
-import WeightTracker from './components/weight/WeightTracker';
-import ProfilePage from './components/profile/ProfilePage';
+import { AppProvider } from './context/AppContext';
 import './styles/global.css';
 
 export default function App() {
@@ -17,13 +13,59 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
-          <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
-          <Route path="/steps" element={<ProtectedRoute><StepsTracker /></ProtectedRoute>} />
-          <Route path="/water" element={<ProtectedRoute><WaterTracker /></ProtectedRoute>} />
-          <Route path="/weight" element={<ProtectedRoute><WeightTracker /></ProtectedRoute>} />
-          <Route path="/profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
-          <Route path="*" element={<Navigate to="/dashboard" replace />} />
+          <Route path="/register" element={<LoginPage />} />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <PlaceholderPage
+                  title="Trang chủ"
+                  description="Mình giữ route này để điều hướng không bị gãy. Phần tập trung hoàn thiện trong lần chỉnh này là màn Nước uống theo đúng ảnh bạn đưa."
+                />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/steps"
+            element={
+              <ProtectedRoute>
+                <PlaceholderPage title="Bước chân" />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/water"
+            element={
+              <ProtectedRoute>
+                <WaterTracker />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/weight"
+            element={
+              <ProtectedRoute>
+                <PlaceholderPage title="Cân nặng" />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/news"
+            element={
+              <ProtectedRoute>
+                <PlaceholderPage title="Tin tức" />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <PlaceholderPage title="Hồ sơ" />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="*" element={<Navigate to="/water" replace />} />
         </Routes>
       </BrowserRouter>
     </AppProvider>

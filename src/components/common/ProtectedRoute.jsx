@@ -1,26 +1,52 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 import { useApp } from '../../context/AppContext';
-import Sidebar from './Sidebar';
 import BottomNav from './BottomNav';
+import Sidebar from './Sidebar';
+import { DropletIcon } from './Icons';
+
+const WINDOW_TITLES = {
+  '/dashboard': 'Trang chủ',
+  '/steps': 'Bước chân',
+  '/water': 'Nước uống',
+  '/weight': 'Cân nặng',
+  '/news': 'Tin tức',
+  '/profile': 'Hồ sơ',
+};
 
 export default function ProtectedRoute({ children }) {
   const { state } = useApp();
+  const location = useLocation();
 
-  if (!state.user) return <Navigate to="/login" replace />;
+  if (!state.user) {
+    return <Navigate to="/login" replace />;
+  }
+
+  const title = WINDOW_TITLES[location.pathname] || 'Healthy App';
 
   return (
-    <div className="app-layout noise-overlay">
-      {/* Background effects */}
-      <div style={{
-        position: 'fixed', inset: 0, pointerEvents: 'none', zIndex: 0,
-        background: 'radial-gradient(ellipse at 10% 20%, rgba(0,212,255,0.04) 0%, transparent 50%), radial-gradient(ellipse at 90% 80%, rgba(168,85,247,0.03) 0%, transparent 50%)',
-      }} />
-      <Sidebar />
-      <main className="main-content">
-        {children}
-      </main>
-      <BottomNav />
+    <div className="app-layout">
+      <div className="app-window">
+        <div className="window-titlebar">
+          <div className="window-app-label">
+            <DropletIcon className="window-app-mark" size={15} />
+            <span>{title}</span>
+          </div>
+
+          <div className="window-controls" aria-hidden="true">
+            <span className="window-control window-control--minimize" />
+            <span className="window-control window-control--maximize" />
+            <span className="window-control window-control--close" />
+          </div>
+        </div>
+
+        <div className="window-body">
+          <Sidebar />
+          <main className="main-content">{children}</main>
+        </div>
+
+        <BottomNav />
+      </div>
     </div>
   );
 }
