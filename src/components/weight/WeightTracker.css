@@ -1,0 +1,294 @@
+﻿.weight-page {
+  width: 100%;
+}
+
+.weight-shell {
+  background: #f4f1ef;
+  border-radius: 18px;
+  padding: 0 0 22px;
+  color: #2f3f69;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+}
+
+.weight-topbar {
+  background: #fb942f;
+  color: #fff;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.weight-topbar__title {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.weight-topbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.weight-icon-btn {
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+}
+
+.weight-summary {
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) minmax(260px, 3fr);
+  gap: 10px;
+  padding: 14px 10px 0;
+}
+
+.weight-card,
+.weight-bmi,
+.weight-mini-card,
+.weight-action-card,
+.weight-chart-card {
+  border-radius: 12px;
+}
+
+.weight-card--current {
+  background: #fb942f;
+  color: #fff;
+  padding: 14px 16px;
+  text-align: center;
+}
+
+.weight-card__label {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.weight-card__value {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.weight-card__unit {
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.weight-bmi {
+  background: linear-gradient(180deg, #bde8b8 0%, #a8e0a7 100%);
+  padding: 12px 14px 10px;
+}
+
+.weight-bmi__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.weight-bmi__label {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.weight-bmi__value {
+  font-size: 33px;
+  font-weight: 800;
+  color: #51745a;
+  line-height: 1;
+}
+
+.weight-bmi__badge {
+  background: #58cf63;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 7px 18px;
+  border-radius: 999px;
+  min-width: 118px;
+  text-align: center;
+}
+
+.weight-bmi__bar {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.45);
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.weight-bmi__bar-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #f0bb4b 0%, #58cf63 70%);
+}
+
+.weight-bmi__zones {
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  font-size: 12px;
+}
+
+.weight-bmi__zones span.is-active {
+  font-weight: 800;
+}
+
+.weight-meta-grid {
+  padding: 12px 10px 0;
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) minmax(160px, 1fr) minmax(220px, 2fr);
+  gap: 10px;
+}
+
+.weight-mini-card {
+  padding: 13px 14px;
+}
+
+.weight-mini-card--goal {
+  background: #a9d4ee;
+}
+
+.weight-mini-card--loss {
+  background: #dfb7e6;
+}
+
+.weight-mini-card__icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.weight-mini-card__label {
+  color: #3462cc;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.weight-mini-card__value {
+  margin-top: 4px;
+  font-size: 33px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.weight-action-card {
+  background: #fb942f;
+  padding: 14px 18px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.weight-action-card__title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.weight-action-card__plus {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.weight-action-card__form {
+  display: flex;
+  gap: 10px;
+}
+
+.weight-action-card__input {
+  flex: 1;
+  border: none;
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 15px;
+  outline: none;
+}
+
+.weight-action-card__button {
+  border: none;
+  border-radius: 10px;
+  background: #fff;
+  color: #ef7f18;
+  font-weight: 700;
+  padding: 0 18px;
+  cursor: pointer;
+}
+
+.weight-action-card__button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.weight-chart-card {
+  margin: 14px 10px 0;
+  background: #fbfaf9;
+  padding: 14px 10px 10px;
+}
+
+.weight-chart-card__title {
+  color: #3b63d2;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.weight-chart {
+  background: #fbfaf8;
+  border-radius: 8px;
+}
+
+.weight-chart-card__time {
+  display: flex;
+  justify-content: space-between;
+  color: #5a87ef;
+  font-size: 12px;
+  padding: 2px 12px 0 26px;
+}
+
+.weight-tooltip {
+  background: #fff;
+  border: 1px solid #ffd1a2;
+  border-radius: 10px;
+  padding: 8px 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.weight-tooltip__date {
+  font-size: 12px;
+  color: #6d7ba5;
+}
+
+.weight-tooltip__value {
+  color: #ef8f35;
+  font-size: 18px;
+  font-weight: 800;
+  margin-top: 2px;
+}
+
+@media (max-width: 960px) {
+  .weight-summary,
+  .weight-meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .weight-action-card__form {
+    flex-direction: column;
+  }
+
+  .weight-action-card__button {
+    min-height: 42px;
+  }
+}

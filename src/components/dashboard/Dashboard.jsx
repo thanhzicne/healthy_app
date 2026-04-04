@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { useNavigate } from 'react-router-dom';
 import { useApp } from '../../context/AppContext';
 import { today, calcWaterGoal, calcStepGoal } from '../../utils/helpers';
@@ -94,4 +95,9 @@ export default function Dashboard() {
       </div>
     </div>
   );
+}
+
+
+export default function Dashboard() {
+  return <div>Dashboard</div>;
 }
