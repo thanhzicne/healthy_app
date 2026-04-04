@@ -1,7 +1,9 @@
 name: nhom3-healthyapp
 
+
 services:
   frontend:
+    image: phamducthanh/nhom3-healthyapp-frontend:latest
     build:
       context: .
       dockerfile: Dockerfile
@@ -13,6 +15,7 @@ services:
       - backend
 
   backend:
+    image: phamducthanh/nhom3-healthyapp-backend:latest
     build:
       context: ./backend
       dockerfile: Dockerfile

@@ -5,7 +5,7 @@ import ProtectedRoute from './components/common/ProtectedRoute';
 import LoginPage from './components/auth/LoginPage';
 import RegisterPage from './components/auth/RegisterPage';
 import Dashboard from './components/dashboard/Dashboard';
-import StepsTracker from './components/steps/StepsTracker';
+import StepsTracker from './components/steps/StepsTrackerModern';
 import WaterTracker from './components/water/WaterTracker';
 import WeightTracker from './components/weight/WeightTracker';
 import ProfilePage from './components/profile/ProfilePage';
