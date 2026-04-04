@@ -2,7 +2,8 @@ import React, { createContext, useContext, useEffect, useReducer, useState } fro
 
 const AppContext = createContext(null);
 
-export const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:4000';
+const runtimeConfig = typeof window !== 'undefined' ? window.__APP_CONFIG__ || {} : {};
+export const API_URL = runtimeConfig.REACT_APP_API_URL || process.env.REACT_APP_API_URL || 'http://localhost:4000';
 
 function readStorage(key, fallback) {
   const raw = localStorage.getItem(key);
