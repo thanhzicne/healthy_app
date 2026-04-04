@@ -1,0 +1,296 @@
+.water-page {
+  color: #2152b2;
+}
+
+.water-shell {
+  background: #f3f3f3;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 26px 56px rgba(6, 36, 99, 0.18);
+}
+
+.water-topbar {
+  background: linear-gradient(90deg, #3cc2ef 0%, #3ab4e1 100%);
+  color: #fff;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.water-topbar__title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.water-topbar__icons {
+  display: flex;
+  gap: 14px;
+  font-size: 24px;
+}
+
+.water-grid {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 22px;
+}
+
+.water-main {
+  display: grid;
+  gap: 18px;
+}
+
+.water-side {
+  display: grid;
+  gap: 18px;
+}
+
+.water-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgba(73, 119, 214, 0.08);
+}
+
+.water-progress {
+  background: linear-gradient(135deg, #73c0f0 0%, #63b8ee 100%);
+  padding: 18px;
+  color: #fff;
+}
+
+.water-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: #4b61da;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.water-progress__heading {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.water-progress__body {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.water-ring {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  background: #f2e9e9;
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  box-shadow: inset 0 0 0 14px rgba(255, 255, 255, 0.22);
+}
+
+.water-ring__inner {
+  text-align: center;
+  color: #4d6bdc;
+}
+
+.water-ring__value {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.water-ring__meta {
+  font-size: 12px;
+  color: rgba(77, 107, 220, 0.72);
+}
+
+.water-cups__hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.water-cups__hero span {
+  font-size: 28px;
+}
+
+.water-cups__track {
+  margin-top: 14px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.36);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.water-cups__fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #ffffff 0%, #d5f6ff 100%);
+}
+
+.water-progress__goal {
+  margin-top: 16px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.water-quick {
+  display: grid;
+  gap: 10px;
+}
+
+.water-quick__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.water-quick__button {
+  border: none;
+  border-radius: 16px;
+  padding: 22px 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 16px 24px rgba(59, 88, 208, 0.12);
+}
+
+.water-quick__button:nth-child(1) { background: linear-gradient(180deg, #3ac8eb 0%, #40b5eb 100%); }
+.water-quick__button:nth-child(2) { background: linear-gradient(180deg, #6adbe2 0%, #62d0d7 100%); }
+.water-quick__button:nth-child(3) { background: linear-gradient(180deg, #4a9da1 0%, #44969d 100%); }
+.water-quick__button:nth-child(4) { background: linear-gradient(180deg, #6861f0 0%, #5e5ce7 100%); }
+
+.water-chart {
+  padding: 14px 16px 16px;
+}
+
+.water-chart__subtitle {
+  margin-top: 2px;
+  color: #a2a5cf;
+  font-size: 13px;
+}
+
+.water-chart__frame {
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e9edff;
+  padding: 10px 12px 4px;
+}
+
+.water-stats {
+  padding: 14px 16px 18px;
+}
+
+.water-stats__grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.water-stat {
+  border-radius: 16px;
+  color: #fff;
+  padding: 16px 14px;
+  min-height: 118px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.water-stat:nth-child(1) { background: linear-gradient(180deg, #72c5f1 0%, #5eb8ee 100%); }
+.water-stat:nth-child(2) { background: linear-gradient(180deg, #63dde2 0%, #53d0d7 100%); }
+.water-stat:nth-child(3) { background: linear-gradient(180deg, #72cfd0 0%, #67c1c4 100%); }
+.water-stat:nth-child(4) { background: linear-gradient(180deg, #c563db 0%, #b552cf 100%); }
+
+.water-stat__icon {
+  font-size: 24px;
+}
+
+.water-stat__label {
+  font-size: 14px;
+}
+
+.water-stat__value {
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.water-stat__unit {
+  font-size: 14px;
+}
+
+.water-logs {
+  padding: 14px 16px 18px;
+}
+
+.water-logs__list {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.water-log {
+  background: #f6f8ff;
+  border: 1px solid #ebf0ff;
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #4b61da;
+  font-weight: 700;
+}
+
+.water-log span:last-child {
+  color: #7d86b8;
+  font-size: 13px;
+}
+
+.water-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.water-action {
+  flex: 1;
+  border: none;
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.water-action--primary {
+  color: #fff;
+  background: linear-gradient(90deg, #4b61ee 0%, #36c2ef 100%);
+}
+
+.water-action--ghost {
+  color: #5567c6;
+  background: #edf2ff;
+}
+
+@media (max-width: 1100px) {
+  .water-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .water-progress__body,
+  .water-quick__grid,
+  .water-stats__grid {
+    grid-template-columns: 1fr;
+  }
+}
