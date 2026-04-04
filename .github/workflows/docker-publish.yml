@@ -27,7 +27,9 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: phamducthanh/nhom3-healthyapp-frontend:latest
+          tags: |
+            phamducthanh/nhom3-healthyapp-frontend:latest
+            phamducthanh/nhom3-healthyapp-frontend:${{ github.sha }}
 
       - name: Build and push backend
         uses: docker/build-push-action@v6
@@ -36,6 +38,7 @@ jobs:
           file: ./backend/Dockerfile
           push: true
           tags: |
-            phamducthanh/nhom3-healthyapp-frontend:latest
-            phamducthanh/nhom3-healthyapp-frontend:${{ github.sha }}
+            phamducthanh/nhom3-healthyapp-backend:latest
+            phamducthanh/nhom3-healthyapp-backend:${{ github.sha }}
+
 
