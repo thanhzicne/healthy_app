@@ -5,7 +5,17 @@ import Sidebar from './Sidebar';
 import BottomNav from './BottomNav';
 
 export default function ProtectedRoute({ children }) {
-  const { state } = useApp();
+  const { state, isBootstrapping } = useApp();
+
+  if (isBootstrapping) {
+    return (
+      <div className="app-layout noise-overlay" style={{ display: 'grid', placeItems: 'center', minHeight: '100vh' }}>
+        <div style={{ color: '#f0f4ff', fontFamily: 'var(--font-display)', fontSize: 20 }}>
+          Dang tai du lieu mau...
+        </div>
+      </div>
+    );
+  }
 
   if (!state.user) return <Navigate to="/login" replace />;
 

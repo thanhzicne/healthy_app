@@ -1,0 +1,6 @@
+node_modules
+build
+.git
+.qodo
+.sixth
+backend/node_modules
