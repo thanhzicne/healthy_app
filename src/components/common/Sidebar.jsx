@@ -1,13 +1,14 @@
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useApp } from '../../context/AppContext';
+import './Navigation.css';
 
 const NAV_ITEMS = [
-  { path: '/dashboard', icon: '⬡', label: 'Tổng quan' },
-  { path: '/steps', icon: '👟', label: 'Bước chân' },
-  { path: '/water', icon: '💧', label: 'Nước uống' },
-  { path: '/weight', icon: '⚖️', label: 'Cân nặng' },
-  { path: '/profile', icon: '👤', label: 'Hồ sơ' },
+  { path: '/dashboard', icon: '\u2302', label: 'Tổng quan' },
+  { path: '/steps', icon: '\u{1F6B6}', label: 'Bước chân' },
+  { path: '/water', icon: '\u{1F4A7}', label: 'Nước uống' },
+  { path: '/weight', icon: '\u2696', label: 'Cân nặng' },
+  { path: '/profile', icon: '\u{1F464}', label: 'Hồ sơ' },
 ];
 
 export default function Sidebar() {
@@ -21,11 +22,10 @@ export default function Sidebar() {
   };
 
   return (
-    <aside style={styles.sidebar}>
-      {/* Logo */}
+    <aside className="app-sidebar" style={styles.sidebar}>
       <div style={styles.logo}>
         <div style={styles.logoIcon}>
-          <span style={{ fontSize: 20 }}>♥</span>
+          <span style={{ fontSize: 20 }}>{'\u2665'}</span>
         </div>
         <div>
           <div style={styles.logoName}>VitaTrack</div>
@@ -33,21 +33,21 @@ export default function Sidebar() {
         </div>
       </div>
 
-      {/* User mini card */}
       {profile && (
         <div style={styles.userCard}>
           <div style={styles.avatar}>{(profile.name || 'U')[0].toUpperCase()}</div>
           <div style={styles.userInfo}>
             <div style={styles.userName}>{profile.name || 'Người dùng'}</div>
-            <div style={styles.userMeta}>{profile.age || '--'} tuổi · {profile.gender === 'male' ? 'Nam' : 'Nữ'}</div>
+            <div style={styles.userMeta}>
+              {profile.age || '--'} tuổi | {profile.gender === 'male' ? 'Nam' : 'Nữ'}
+            </div>
           </div>
         </div>
       )}
 
-      {/* Navigation */}
       <nav style={styles.nav}>
         <div style={styles.navLabel}>MENU</div>
-        {NAV_ITEMS.map(item => (
+        {NAV_ITEMS.map((item) => (
           <NavLink
             key={item.path}
             to={item.path}
@@ -58,18 +58,16 @@ export default function Sidebar() {
           >
             <span style={styles.navIcon}>{item.icon}</span>
             <span style={styles.navLabel2}>{item.label}</span>
-            {item.path === '/dashboard' && <span style={styles.navBadge}>●</span>}
+            {item.path === '/dashboard' && <span style={styles.navBadge}>{'\u2022'}</span>}
           </NavLink>
         ))}
       </nav>
 
-      {/* Logout */}
       <button onClick={handleLogout} style={styles.logoutBtn}>
-        <span>⬡</span>
+        <span>{'\u21AA'}</span>
         <span>Đăng xuất</span>
       </button>
 
-      {/* Bottom decoration */}
       <div style={styles.sidebarDecor} />
     </aside>
   );
